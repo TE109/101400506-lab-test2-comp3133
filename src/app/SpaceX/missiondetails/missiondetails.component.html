@@ -1,0 +1,20 @@
+<h2>{{ mission.mission_name }}</h2>
+<p><strong>Flight Number:</strong> {{ mission.flight_number }}</p>
+<p><strong>Launch Year:</strong> {{ mission.launch_year }}</p>
+<p><strong>Details:</strong> {{ mission.details || '' }}</p>
+
+<div>
+  <img [src]="mission.mission_patch_small" alt="Mission Patch" width="150">
+</div>
+
+<div>
+  <p><strong>Rocket:</strong> {{ mission.rocket.rocket_name }} ({{ mission.rocket.rocket_type }})</p>
+</div>
+
+<div >
+  <a *ngIf="mission.links.article_link" [href]="mission.links.article_link" target="_blank">Read Article</a> |
+  <a *ngIf="mission.links.wikipedia" [href]="mission.links.wikipedia" target="_blank">Wikipedia</a> |
+  <a *ngIf="mission.links.video_link" [href]="mission.links.video_link" target="_blank">Watch Video</a> |
+  <a routerLink="/missionlist">To List</a>
+</div>
+  

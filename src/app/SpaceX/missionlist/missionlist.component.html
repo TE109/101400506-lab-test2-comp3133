@@ -1,0 +1,33 @@
+<table>
+    <thead>
+      <tr>
+        <th>Flight Number</th>
+        <th>Mission Name</th>
+        <th>Launch Year</th>
+        <th>Details</th>
+        <th>Rocket Name</th>
+        <th>Rocket Type</th>
+        <th>Mission Patch</th>
+        <th>Article Link</th>
+        <th>Wikipedia Link</th>
+        <th>Video Link</th>
+        <th>Info</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let mission of missionList; let i = index">
+        <td>{{ mission.flight_number }}</td>
+        <td>{{ mission.mission_name }}</td>
+        <td>{{ mission.launch_year }}</td>
+        <td>{{ mission.details }}</td>
+        <td>{{ mission.rocket.rocket_name }}</td>
+        <td>{{ mission.rocket.rocket_type }}</td>
+        <td><img [src]="mission.mission_patch_small" alt="Mission Patch" width="50" height="50" /></td>
+        <td><a [href]="mission.links.article_link" target="_blank">Read Article</a></td>
+        <td><a [href]="mission.links.wikipedia" target="_blank">Wikipedia</a></td>
+        <td><a [href]="mission.links.video_link" target="_blank">Watch Video</a></td>
+        <td><a [routerLink]="['/missiondetails', mission.flight_number]">Details</a></td>
+      </tr>
+    </tbody>
+  </table>
+  
