@@ -1,5 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+body {
+    font-family: Roboto;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h2 {
+    color: grey;
+  }
+  
+  
+  button {
+    background-color: blue;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+    border: 1px solid lightgray;
+  }
+  
+  th {
+    background-color: gray;
+  }
