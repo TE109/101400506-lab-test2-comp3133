@@ -7,7 +7,7 @@ import { MissiondetailsComponent } from './SpaceX/missiondetails/missiondetails.
 const routes: Routes = [
   {path:"missionlist",component:MissionlistComponent},
 {path:"missionfilter",component:MissionfilterComponent},
-{path:"missiondetails/:flight_number",component:MissiondetailsComponent,data: { renderMode: 'no-prerender' }}];
+{path:"missiondetails/:flight_number",component:MissiondetailsComponent,data: { flight_number: 1 }}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
