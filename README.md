@@ -1,59 +1,27 @@
-# 101400506LabTest2Comp3133
+# SpaceX Mission Viewer
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+## Usage
 
-## Development server
+The SpaceX Mission Viewer is a web application that allows users to view information about SpaceX missions. The application provides three main features:
 
-To start a local development server, run:
+1. **Mission List**: This feature displays a list of all SpaceX missions, including details such as flight number, mission name, launch year, rocket information, and links to related articles, Wikipedia pages, and video links.
 
-```bash
-ng serve
-```
+2. **Mission Filter**: This feature allows users to filter the mission list by launch year.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+3. **Mission details**: This feature allows users to veiw the mission details of specifc missions.
 
-## Code scaffolding
+To use the application, follow these steps:
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+1. Navigate to the application's main page.
+2. To view the full list of missions, click on the "Mission List" link.
+3. To filter the missions by launch year, click on the "Mission Filter" link, select the desired year, and click the "Search" button.
+4. To view the details of a specific mission, click on the "Details" link for the mission you're interested in.
 
-```bash
-ng generate component component-name
-```
+## API
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The SpaceX Mission Viewer application uses the following API endpoints:
 
-```bash
-ng generate --help
-```
+1. **Fetch All Missions**: `https://api.spacexdata.com/v3/launches`
+2. **Fetch Missions by Launch Year**: `https://api.spacexdata.com/v3/launches?launch_year={year}`
+3. **Fetch Mission Details**: `https://api.spacexdata.com/v3/launches/{flight_number}`
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
